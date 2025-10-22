@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: homeserver
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: ${DB_USERNAME}
+    url: jdbc:postgresql://localhost:5432/pintahome
+    password: ${DB_PASSWORD}
+  liquibase:
+    enabled: ${LB_ENABLED:true}
+server:
+  port: '8080'
