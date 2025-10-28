@@ -11,6 +11,3 @@ create table public.users
     updatedat timestamp
 );
 
-alter table public.users
-    owner to pinta;
-
