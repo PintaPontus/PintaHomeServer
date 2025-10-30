@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.pinta"
-version = "0.0.1-SNAPSHOT"
+version = "0.1.0-SNAPSHOT"
 description = "homeserver"
 
 java {
@@ -31,12 +31,13 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
-    implementation("org.springframework.boot:spring-boot-starter-websocket")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     implementation("org.liquibase:liquibase-core")
+    implementation("com.auth0:java-jwt:4.5.0")
+    implementation("org.apache.sshd:sshd-sftp:2.16.0")
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("org.postgresql:postgresql")

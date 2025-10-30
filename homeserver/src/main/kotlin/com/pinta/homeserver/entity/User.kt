@@ -1,10 +1,6 @@
 package com.pinta.homeserver.entity
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
-import jakarta.persistence.Table
+import jakarta.persistence.*
 import java.time.LocalDateTime
 
 @Entity
@@ -12,11 +8,11 @@ import java.time.LocalDateTime
 data class User(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0,
+    val id: Long,
     val name: String,
     val password: String,
     val email: String,
     val image: String,
-    val createdat: LocalDateTime,
-    val updatedat: LocalDateTime,
+    val createdAt: LocalDateTime,
+    val updatedAt: LocalDateTime,
 )
