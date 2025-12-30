@@ -23,7 +23,9 @@ class SecurityConfig(
             .httpBasic { basic -> basic.disable() }
             .formLogin { form -> form.disable() }
             .authorizeExchange { exchanges ->
-                exchanges!!.pathMatchers("/auth/login").permitAll()
+                exchanges!!
+                    .pathMatchers("/auth/login").permitAll()
+                    .pathMatchers("/test/**").permitAll()
                     .anyExchange().authenticated()
             }.addFilterBefore(
                 { exchange, chain ->
