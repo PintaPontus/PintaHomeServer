@@ -1,0 +1,11 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav [(opened)]="isSidenavOpen">
+    TEST SIDENAV
+  </mat-sidenav>
+  <mat-sidenav-content>
+    TOOLBAR
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
