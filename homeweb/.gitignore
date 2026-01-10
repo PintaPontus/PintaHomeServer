@@ -45,3 +45,6 @@ Thumbs.db
 
 # Nginx
 nginx/*.pem
+
+#Environments
+/src/environments/*.ts
